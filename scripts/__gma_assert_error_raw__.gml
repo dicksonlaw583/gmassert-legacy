@@ -5,7 +5,13 @@
       global.__gma_assert_triggered__ = true;
     break;
     case GMASSERT_MODE_ENABLED:
-      show_error(argument0 + chr(13) + chr(13) + "Expected: " + argument1 + chr(13) + chr(13) + "Got: " + argument2 + chr(13) + chr(13), true);
+      var msg = argument0 + chr(13) + chr(13) + "Expected: " + argument1 + chr(13) + chr(13) + "Got: " + argument2 + chr(13) + chr(13);
+      if (os_browser == browser_not_a_browser) {
+        show_error(msg, true);
+      }
+      else {
+        show_message(msg);
+      }
     break;
   }
 }
