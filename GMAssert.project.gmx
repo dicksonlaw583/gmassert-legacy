@@ -8,6 +8,45 @@
   <sprites name="sprites"/>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <scripts name="gmassert">
+      <script>scripts\__gma_assert_error__.gml</script>
+      <script>scripts\__gma_assert_error_simple__.gml</script>
+      <script>scripts\__gma_assert_error_raw__.gml</script>
+      <script>scripts\__gma_debug_type__.gml</script>
+      <script>scripts\__gma_debug_value__.gml</script>
+      <script>scripts\assert.gml</script>
+      <script>scripts\assert_fail.gml</script>
+      <script>scripts\assert_equal.gml</script>
+      <script>scripts\assert_not_equal.gml</script>
+    </scripts>
+    <scripts name="gmassert_test">
+      <script>scripts\test_case.gml</script>
+      <script>scripts\test_case_no_trigger.gml</script>
+      <script>scripts\test_case_trigger.gml</script>
+      <script>scripts\test_fixture_array.gml</script>
+      <script>scripts\test_fixture_array2.gml</script>
+      <script>scripts\gma_test_all.gml</script>
+      <script>scripts\__gma_test_debug_type__.gml</script>
+      <script>scripts\__gma_test_debug_value__.gml</script>
+      <script>scripts\__gma_test_trigger_messages__.gml</script>
+    </scripts>
+  </scripts>
+  <rooms name="rooms">
+    <room>rooms\rm_test</room>
+  </rooms>
+  <constants number="10">
+    <constant name="GMASSERT_MODE">GMASSERT_MODE_SELFTEST</constant>
+    <constant name="GMASSERT_MODE_DISABLED">0</constant>
+    <constant name="GMASSERT_MODE_SELFTEST">1</constant>
+    <constant name="GMASSERT_MODE_ENABLED">2</constant>
+    <constant name="GMASSERT_TOLERANCE">0.0000001</constant>
+    <constant name="GMASSERT_TYPE_UNDEFINED">0</constant>
+    <constant name="GMASSERT_TYPE_REAL">1</constant>
+    <constant name="GMASSERT_TYPE_STRING">2</constant>
+    <constant name="GMASSERT_TYPE_ARRAY">3</constant>
+    <constant name="GMASSERT_TYPE_UNKNOWN">-1</constant>
+  </constants>
   <help>
     <rtf>help.rtf</rtf>
   </help>
