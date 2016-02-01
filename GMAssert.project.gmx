@@ -33,6 +33,16 @@
       <script>scripts\assert_less_than.gml</script>
       <script>scripts\assert_greater_than_or_equal.gml</script>
       <script>scripts\assert_less_than_or_equal.gml</script>
+      <script>scripts\assert_is_string.gml</script>
+      <script>scripts\assert_is_real.gml</script>
+      <script>scripts\assert_is_array.gml</script>
+	  <script>scripts\assert_is_undefined.gml</script>
+      <script>scripts\assert_is_defined.gml</script>
+      <script>scripts\assert_isnt_string.gml</script>
+      <script>scripts\assert_isnt_real.gml</script>
+      <script>scripts\assert_isnt_array.gml</script>
+	  <script>scripts\assert_isnt_undefined.gml</script>
+      <script>scripts\assert_isnt_defined.gml</script>
     </scripts>
     <scripts name="gmassert_test">
       <script>scripts\test_case.gml</script>

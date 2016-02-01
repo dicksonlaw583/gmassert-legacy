@@ -165,4 +165,74 @@
   test_case_no_trigger(assert_less_than_or_equal(arrayA, arrayA));
   test_case_no_trigger(assert_less_than_or_equal(test_fixture_array2(2, 2, "boogie", "DOG", 907), test_fixture_array2(2, 5, "cat", "DOGS", 907)));
   test_case_no_trigger(assert_less_than_or_equal(arrayB, arrayB));
+  
+  //assert_is_string(got)
+  test_case_trigger(assert_is_string(undefined));
+  test_case_trigger(assert_is_string(3));
+  test_case_no_trigger(assert_is_string(""));
+  test_case_trigger(assert_is_string(arrayA));
+  test_case_trigger(assert_is_string(arrayB));
+  
+  //assert_isnt_string(got)
+  test_case_no_trigger(assert_isnt_string(undefined));
+  test_case_no_trigger(assert_isnt_string(3));
+  test_case_trigger(assert_isnt_string(""));
+  test_case_no_trigger(assert_isnt_string(arrayA));
+  test_case_no_trigger(assert_isnt_string(arrayB));
+  
+  //assert_is_real(got)
+  test_case_trigger(assert_is_real(undefined));
+  test_case_no_trigger(assert_is_real(3));
+  test_case_trigger(assert_is_real(""));
+  test_case_trigger(assert_is_real(arrayA));
+  test_case_trigger(assert_is_real(arrayB));
+  
+  //assert_isn_real(got)
+  test_case_no_trigger(assert_isnt_real(undefined));
+  test_case_trigger(assert_isnt_real(3));
+  test_case_no_trigger(assert_isnt_real(""));
+  test_case_no_trigger(assert_isnt_real(arrayA));
+  test_case_no_trigger(assert_isnt_real(arrayB));
+  
+  //assert_is_array(got)
+  test_case_trigger(assert_is_array(undefined));
+  test_case_trigger(assert_is_array(3));
+  test_case_trigger(assert_is_array(""));
+  test_case_no_trigger(assert_is_array(arrayA));
+  test_case_no_trigger(assert_is_array(arrayB));
+  
+  //assert_isn_array(got)
+  test_case_no_trigger(assert_isnt_array(undefined));
+  test_case_no_trigger(assert_isnt_array(3));
+  test_case_no_trigger(assert_isnt_array(""));
+  test_case_trigger(assert_isnt_array(arrayA));
+  test_case_trigger(assert_isnt_array(arrayB));
+  
+  //assert_is_undefined(got)
+  test_case_no_trigger(assert_is_undefined(undefined));
+  test_case_trigger(assert_is_undefined(3));
+  test_case_trigger(assert_is_undefined(""));
+  test_case_trigger(assert_is_undefined(arrayA));
+  test_case_trigger(assert_is_undefined(arrayB));
+  
+  //assert_is_defined(got)
+  test_case_trigger(assert_is_defined(undefined));
+  test_case_no_trigger(assert_is_defined(3));
+  test_case_no_trigger(assert_is_defined(""));
+  test_case_no_trigger(assert_is_defined(arrayA));
+  test_case_no_trigger(assert_is_defined(arrayB));
+  
+  //assert_isnt_undefined(got)
+  test_case_trigger(assert_isnt_undefined(undefined));
+  test_case_no_trigger(assert_isnt_undefined(3));
+  test_case_no_trigger(assert_isnt_undefined(""));
+  test_case_no_trigger(assert_isnt_undefined(arrayA));
+  test_case_no_trigger(assert_isnt_undefined(arrayB));
+  
+  //assert_isnt_defined(got)
+  test_case_no_trigger(assert_isnt_defined(undefined));
+  test_case_trigger(assert_isnt_defined(3));
+  test_case_trigger(assert_isnt_defined(""));
+  test_case_trigger(assert_isnt_defined(arrayA));
+  test_case_trigger(assert_isnt_defined(arrayB));
 }
