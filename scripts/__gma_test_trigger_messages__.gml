@@ -95,4 +95,74 @@
   test_case_trigger(assert_not_equalish(5, 5+GMASSERT_TOLERANCE));
   test_case_no_trigger(assert_not_equalish(test_fixture_array(6, 5), test_fixture_array(6, 5.001)));
   test_case_trigger(assert_not_equalish(test_fixture_array(6, 5), test_fixture_array(6, 5+GMASSERT_TOLERANCE)));
+
+  //assert_greater_than(got, expected)
+  test_case_trigger(assert_greater_than("NOT SUPPORTED", undefined));
+  test_case_no_trigger(assert_greater_than(5, 3));
+  test_case_no_trigger(assert_greater_than("cat", "boogie"));
+  test_case_no_trigger(assert_greater_than("DOGS", "DOG"));
+  test_case_no_trigger(assert_greater_than(test_fixture_array(5, "cat", "DOGS"), test_fixture_array(4, "boogie", "DOG")));
+  test_case_no_trigger(assert_greater_than(test_fixture_array2(2, 5, "cat", "DOGS", 907), test_fixture_array2(2, 4, "boogie", "DOG", 583)));
+  test_case_trigger(assert_greater_than(3, 5));
+  test_case_trigger(assert_greater_than(3, 3));
+  test_case_trigger(assert_greater_than("boogie", "cat"));
+  test_case_trigger(assert_greater_than("boogie", "boogie"));
+  test_case_trigger(assert_greater_than("DOG", "DOGS"));
+  test_case_trigger(assert_greater_than(test_fixture_array(5, "cat", "DOGS"), test_fixture_array(4, "cat", "DOG")));
+  test_case_trigger(assert_greater_than(arrayA, arrayA));
+  test_case_trigger(assert_greater_than(test_fixture_array2(2, 5, "cat", "DOGS", 907), test_fixture_array2(2, 4, "boogie", "DOG", 907)));
+  test_case_trigger(assert_greater_than(arrayB, arrayB));
+  
+  //assert_less_than(got, expected)
+  test_case_trigger(assert_less_than("NOT SUPPORTED", undefined));
+  test_case_trigger(assert_less_than(5, 3));
+  test_case_trigger(assert_less_than("cat", "boogie"));
+  test_case_trigger(assert_less_than("DOGS", "DOG"));
+  test_case_trigger(assert_less_than(test_fixture_array(2, "cat", "DOGS"), test_fixture_array(4, "boogie", "DOG")));
+  test_case_trigger(assert_less_than(test_fixture_array2(2, 3, "cat", "DOG", 907), test_fixture_array2(2, 4, "boogie", "DOGS", 583)));
+  test_case_no_trigger(assert_less_than(3, 5));
+  test_case_trigger(assert_less_than(3, 3));
+  test_case_no_trigger(assert_less_than("boogie", "cat"));
+  test_case_trigger(assert_less_than("boogie", "boogie"));
+  test_case_no_trigger(assert_less_than("DOG", "DOGS"));
+  test_case_no_trigger(assert_less_than(test_fixture_array(4, "cat", "DOG"), test_fixture_array(5, "cats", "DOGS")));
+  test_case_trigger(assert_less_than(test_fixture_array(5, "cat", "DOGS"), test_fixture_array(4, "cat", "DOG")));
+  test_case_trigger(assert_less_than(arrayA, arrayA));
+  test_case_no_trigger(assert_less_than(test_fixture_array2(2, 4, "boogie", "DOG", 583), test_fixture_array2(2, 5, "cat", "DOGS", 907)));
+  test_case_trigger(assert_less_than(test_fixture_array2(2, 5, "cat", "DOGS", 907), test_fixture_array2(2, 4, "boogie", "DOG", 907)));
+  test_case_trigger(assert_less_than(arrayB, arrayB));
+  
+  //assert_greater_than_or_equal(got, expected)
+  test_case_trigger(assert_greater_than_or_equal("NOT SUPPORTED", undefined));
+  test_case_no_trigger(assert_greater_than_or_equal(5, 3));
+  test_case_no_trigger(assert_greater_than_or_equal(5, 5));
+  test_case_no_trigger(assert_greater_than_or_equal("cat", "boogie"));
+  test_case_no_trigger(assert_greater_than_or_equal("cat", "cat"));
+  test_case_no_trigger(assert_greater_than_or_equal("DOGS", "DOG"));
+  test_case_no_trigger(assert_greater_than_or_equal(test_fixture_array(5, "cat", "DOGS"), test_fixture_array(4, "boogie", "DOG")));
+  test_case_no_trigger(assert_greater_than_or_equal(test_fixture_array(5, "cat", "DOG"), test_fixture_array(4, "boogie", "DOG")));
+  test_case_no_trigger(assert_greater_than_or_equal(test_fixture_array2(2, 5, "cat", "DOGS", 907), test_fixture_array2(2, 4, "boogie", "DOG", 583)));
+  test_case_no_trigger(assert_greater_than_or_equal(test_fixture_array2(2, 4, "cat", "DOGS", 583), test_fixture_array2(2, 4, "boogie", "DOG", 583)));
+  test_case_trigger(assert_greater_than_or_equal(3, 5));
+  test_case_trigger(assert_greater_than_or_equal("boogie", "cat"));
+  test_case_trigger(assert_greater_than_or_equal("DOG", "DOGS"));
+  test_case_trigger(assert_greater_than_or_equal(test_fixture_array(5, "cat", "DOGS"), test_fixture_array(4, "cats", "DOG")));
+  test_case_trigger(assert_greater_than_or_equal(test_fixture_array2(2, 5, "cat", "DOGS", 907), test_fixture_array2(2, 4, "doggie", "DOG", 907)));
+  
+  //assert_less_than_or_equal(got, expected)
+  test_case_trigger(assert_less_than_or_equal("NOT SUPPORTED", undefined));
+  test_case_trigger(assert_less_than_or_equal(5, 3));
+  test_case_trigger(assert_less_than_or_equal("cat", "boogie"));
+  test_case_trigger(assert_less_than_or_equal("DOGS", "DOG"));
+  test_case_trigger(assert_less_than_or_equal(test_fixture_array(4, "boogie", "DOGS"), test_fixture_array(5, "cat", "DOG")));
+  test_case_trigger(assert_less_than_or_equal(test_fixture_array2(2, 4, "cat", "DOGS", 907), test_fixture_array2(2, 5, "boogie", "DOG", 583)));
+  test_case_no_trigger(assert_less_than_or_equal(3, 5));
+  test_case_no_trigger(assert_less_than_or_equal(3, 3));
+  test_case_no_trigger(assert_less_than_or_equal("boogie", "cat"));
+  test_case_no_trigger(assert_less_than_or_equal("boogie", "boogie"));
+  test_case_no_trigger(assert_less_than_or_equal("DOG", "DOGS"));
+  test_case_no_trigger(assert_less_than_or_equal(test_fixture_array(4, "cat", "DOG"), test_fixture_array(5, "cat", "DOGS")));
+  test_case_no_trigger(assert_less_than_or_equal(arrayA, arrayA));
+  test_case_no_trigger(assert_less_than_or_equal(test_fixture_array2(2, 2, "boogie", "DOG", 907), test_fixture_array2(2, 5, "cat", "DOGS", 907)));
+  test_case_no_trigger(assert_less_than_or_equal(arrayB, arrayB));
 }
