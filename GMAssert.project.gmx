@@ -16,11 +16,14 @@
       <script>scripts\__gma_debug_type__.gml</script>
       <script>scripts\__gma_debug_value__.gml</script>
       <script>scripts\__gma_equal__.gml</script>
+      <script>scripts\__gma_equalish__.gml</script>
       <script>scripts\assert.gml</script>
       <script>scripts\assert_fail.gml</script>
       <script>scripts\assert_equal.gml</script>
+      <script>scripts\assert_equalish.gml</script>
       <script>scripts\assert_is.gml</script>
       <script>scripts\assert_not_equal.gml</script>
+      <script>scripts\assert_not_equalish.gml</script>
       <script>scripts\assert_isnt.gml</script>
     </scripts>
     <scripts name="gmassert_test">

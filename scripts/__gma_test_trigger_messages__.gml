@@ -61,4 +61,38 @@
   test_case_trigger(assert_isnt(undefined, undefined));
   test_case_trigger(assert_isnt(arrayA, arrayA));
   test_case_trigger(assert_isnt(arrayB, arrayB));
+  
+  //assert_equalish(got, expected)
+  test_case_no_trigger(assert_equalish(-4, -4));
+  test_case_no_trigger(assert_equalish("abc", "abc"));
+  test_case_no_trigger(assert_equalish(undefined, undefined));
+  test_case_no_trigger(assert_equalish(arrayA, arrayA));
+  test_case_no_trigger(assert_equalish(arrayB, arrayB));
+  test_case_trigger(assert_equalish(-4, 7));
+  test_case_trigger(assert_equalish("abc", ""));
+  test_case_trigger(assert_equalish(undefined, 72));
+  test_case_trigger(assert_equalish(arrayA, arrayB));
+  test_case_no_trigger(assert_equalish(test_fixture_array(1, 2, 3), test_fixture_array(1, 2, 3)));
+  test_case_no_trigger(assert_equalish(arrayA, test_fixture_array(1, 2, 3)));
+  test_case_trigger(assert_equalish(5, 5.001));
+  test_case_no_trigger(assert_equalish(5, 5+GMASSERT_TOLERANCE));
+  test_case_trigger(assert_equalish(test_fixture_array(6, 5), test_fixture_array(6, 5.001)));
+  test_case_no_trigger(assert_equalish(test_fixture_array(6, 5), test_fixture_array(6, 5+GMASSERT_TOLERANCE)));
+  
+  //assert_not_equalish(got, expected)
+  test_case_no_trigger(assert_not_equalish(-4, 7));
+  test_case_no_trigger(assert_not_equalish("abc", ""));
+  test_case_no_trigger(assert_not_equalish(undefined, 72));
+  test_case_no_trigger(assert_not_equalish(arrayA, arrayB));
+  test_case_trigger(assert_not_equalish(arrayA, test_fixture_array(1, 2, 3)));
+  test_case_trigger(assert_not_equalish(test_fixture_array(1, 2, 3), test_fixture_array(1, 2, 3)));
+  test_case_trigger(assert_not_equalish(-4, -4));
+  test_case_trigger(assert_not_equalish("abc", "abc"));
+  test_case_trigger(assert_not_equalish(undefined, undefined));
+  test_case_trigger(assert_not_equalish(arrayA, arrayA));
+  test_case_trigger(assert_not_equalish(arrayB, arrayB));
+  test_case_no_trigger(assert_not_equalish(5, 5.001));
+  test_case_trigger(assert_not_equalish(5, 5+GMASSERT_TOLERANCE));
+  test_case_no_trigger(assert_not_equalish(test_fixture_array(6, 5), test_fixture_array(6, 5.001)));
+  test_case_trigger(assert_not_equalish(test_fixture_array(6, 5), test_fixture_array(6, 5+GMASSERT_TOLERANCE)));
 }
