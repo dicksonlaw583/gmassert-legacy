@@ -15,6 +15,7 @@
       <script>scripts\__gma_assert_error_raw__.gml</script>
       <script>scripts\__gma_debug_type__.gml</script>
       <script>scripts\__gma_debug_value__.gml</script>
+      <script>scripts\__gma_equal__.gml</script>
       <script>scripts\assert.gml</script>
       <script>scripts\assert_fail.gml</script>
       <script>scripts\assert_equal.gml</script>

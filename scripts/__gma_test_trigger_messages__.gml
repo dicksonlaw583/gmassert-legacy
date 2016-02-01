@@ -22,14 +22,16 @@
   test_case_trigger(assert_equal("abc", ""));
   test_case_trigger(assert_equal(undefined, 72));
   test_case_trigger(assert_equal(arrayA, arrayB));
-  test_case_trigger(assert_equal(test_fixture_array(1, 2, 3), test_fixture_array(1, 2, 3)));
+  test_case_no_trigger(assert_equal(test_fixture_array(1, 2, 3), test_fixture_array(1, 2, 3)));
+  test_case_no_trigger(assert_equal(arrayA, test_fixture_array(1, 2, 3)));
   
   //assert_not_equal(got, expected)
   test_case_no_trigger(assert_not_equal(-4, 7));
   test_case_no_trigger(assert_not_equal("abc", ""));
   test_case_no_trigger(assert_not_equal(undefined, 72));
   test_case_no_trigger(assert_not_equal(arrayA, arrayB));
-  test_case_no_trigger(assert_not_equal(test_fixture_array(1, 2, 3), test_fixture_array(1, 2, 3)));
+  test_case_trigger(assert_not_equal(arrayA, test_fixture_array(1, 2, 3)));
+  test_case_trigger(assert_not_equal(test_fixture_array(1, 2, 3), test_fixture_array(1, 2, 3)));
   test_case_trigger(assert_not_equal(-4, -4));
   test_case_trigger(assert_not_equal("abc", "abc"));
   test_case_trigger(assert_not_equal(undefined, undefined));
