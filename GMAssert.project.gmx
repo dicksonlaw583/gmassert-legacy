@@ -18,7 +18,9 @@
       <script>scripts\assert.gml</script>
       <script>scripts\assert_fail.gml</script>
       <script>scripts\assert_equal.gml</script>
+      <script>scripts\assert_is.gml</script>
       <script>scripts\assert_not_equal.gml</script>
+      <script>scripts\assert_isnt.gml</script>
     </scripts>
     <scripts name="gmassert_test">
       <script>scripts\test_case.gml</script>
