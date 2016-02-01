@@ -209,11 +209,12 @@
   test_case_trigger(assert_isnt_array(arrayB));
   
   //assert_is_undefined(got)
-  test_case_no_trigger(assert_is_undefined(undefined));
-  test_case_trigger(assert_is_undefined(3));
-  test_case_trigger(assert_is_undefined(""));
-  test_case_trigger(assert_is_undefined(arrayA));
-  test_case_trigger(assert_is_undefined(arrayB));
+  //TODO: 1.4.1711 bug prevents assert_is_undefined() from saving at all, uncomment when resolved.
+  //test_case_no_trigger(assert_is_undefined(undefined));
+  //test_case_trigger(assert_is_undefined(3));
+  //test_case_trigger(assert_is_undefined(""));
+  //test_case_trigger(assert_is_undefined(arrayA));
+  //test_case_trigger(assert_is_undefined(arrayB));
   
   //assert_is_defined(got)
   test_case_trigger(assert_is_defined(undefined));
@@ -223,11 +224,12 @@
   test_case_no_trigger(assert_is_defined(arrayB));
   
   //assert_isnt_undefined(got)
-  test_case_trigger(assert_isnt_undefined(undefined));
-  test_case_no_trigger(assert_isnt_undefined(3));
-  test_case_no_trigger(assert_isnt_undefined(""));
-  test_case_no_trigger(assert_isnt_undefined(arrayA));
-  test_case_no_trigger(assert_isnt_undefined(arrayB));
+  //TODO: 1.4.1711 bug prevents assert_isnt_undefined() from saving at all, uncomment when resolved.
+  //test_case_trigger(assert_isnt_undefined(undefined));
+  //test_case_no_trigger(assert_isnt_undefined(3));
+  //test_case_no_trigger(assert_isnt_undefined(""));
+  //test_case_no_trigger(assert_isnt_undefined(arrayA));
+  //test_case_no_trigger(assert_isnt_undefined(arrayB));
   
   //assert_isnt_defined(got)
   test_case_no_trigger(assert_isnt_defined(undefined));
