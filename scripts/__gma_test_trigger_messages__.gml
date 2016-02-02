@@ -259,4 +259,26 @@
   test_case_no_trigger(assert_in_range(test_fixture_array(pi, "Bob"), test_fixture_array(3, "Bob"), test_fixture_array(4, "Caitlyn")));
   test_case_no_trigger(assert_in_range(test_fixture_array(pi, "Bob"), test_fixture_array(pi, "Bob"), test_fixture_array(4, "Caitlyn")));
   test_case_no_trigger(assert_in_range(test_fixture_array(pi, "Bob"), test_fixture_array(pi, "Alice"), test_fixture_array(4, "Bob")));
+
+  //assert_not_in_range(got, lower, upper)
+  test_case_trigger(assert_not_in_range(undefined, undefined, undefined));
+  test_case_trigger(assert_not_in_range(3, 2, "5"));
+  test_case_no_trigger(assert_not_in_range(pi, 4, 5));
+  test_case_no_trigger(assert_not_in_range(pi, 2, 3));
+  test_case_trigger(assert_not_in_range(pi, 3, 4));
+  test_case_trigger(assert_not_in_range(pi, pi, 4));
+  test_case_trigger(assert_not_in_range(pi, 3, pi));
+  test_case_no_trigger(assert_not_in_range("Alice", "Bob", "Caitlyn"));
+  test_case_no_trigger(assert_not_in_range("David", "Bob", "Caitlyn"));
+  test_case_trigger(assert_not_in_range("Bob", "Alice", "Caitlyn"));
+  test_case_trigger(assert_not_in_range("Alice", "Alice", "Bob"));
+  test_case_trigger(assert_not_in_range("Bob", "Alice", "Bob"));
+  test_case_no_trigger(assert_not_in_range(test_fixture_array(pi, "Bob"), test_fixture_array(4, "Caitlyn"), test_fixture_array(5, "David")));
+  test_case_no_trigger(assert_not_in_range(test_fixture_array(pi, "Bob"), test_fixture_array(2, "Alice"), test_fixture_array(3, "Annie")));
+  test_case_no_trigger(assert_not_in_range(test_fixture_array(pi, "Bob"), test_fixture_array(2, "Alice"), test_fixture_array(3, "Caitlyn")));
+  test_case_no_trigger(assert_not_in_range(test_fixture_array(pi, "Bob"), test_fixture_array(3, "Alice"), test_fixture_array(4, "Annie")));
+  test_case_trigger(assert_not_in_range(test_fixture_array(pi, "Bob"), test_fixture_array(3, "Alice"), test_fixture_array(4, "Caitlyn")));
+  test_case_trigger(assert_not_in_range(test_fixture_array(pi, "Bob"), test_fixture_array(3, "Bob"), test_fixture_array(4, "Caitlyn")));
+  test_case_trigger(assert_not_in_range(test_fixture_array(pi, "Bob"), test_fixture_array(pi, "Bob"), test_fixture_array(4, "Caitlyn")));
+  test_case_trigger(assert_not_in_range(test_fixture_array(pi, "Bob"), test_fixture_array(pi, "Alice"), test_fixture_array(4, "Bob")));
 }
