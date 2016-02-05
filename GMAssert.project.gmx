@@ -44,7 +44,9 @@
       <script>scripts\assert_in_range.gml</script>
       <script>scripts\assert_not_in_range.gml</script>
       <script>scripts\assert_contains.gml</script>
+      <script>scripts\assert_contains_exact.gml</script>
       <script>scripts\assert_doesnt_contain.gml</script>
+      <script>scripts\assert_doesnt_contain_exact.gml</script>
     </scripts>
     <scripts name="gmassert_test">
       <script>scripts\test_case.gml</script>

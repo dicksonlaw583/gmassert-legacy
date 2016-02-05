@@ -328,6 +328,50 @@
   test_case_trigger(assert_doesnt_contain(list, "b"));
   test_case_trigger(assert_doesnt_contain(list, 2));
   
+  //assert_contains_exact(got, content)
+  test_case_trigger(assert_contains_exact(undefined, "waahoo"));
+  var inexistent = 0;
+  while (ds_exists(inexistent, ds_type_list)) inexistent++;
+  test_case_trigger(assert_contains_exact(inexistent, "a"));
+  test_case_trigger(assert_contains_exact("waahoo", 5));
+  test_case_trigger(assert_contains_exact("waahoo", "abc"));
+  test_case_no_trigger(assert_contains_exact("Caitlyn", "it"));
+  test_case_no_trigger(assert_contains_exact("Caitlyn", "Ca"));
+  test_case_no_trigger(assert_contains_exact("Caitlyn", "n"));
+  test_case_trigger(assert_contains_exact(arrayA, "WAAHOO"));
+  test_case_no_trigger(assert_contains_exact(arrayA, 3));
+  test_case_trigger(assert_contains_exact(arrayB, undefined));
+  test_case_trigger(assert_contains_exact(arrayB, 583));
+  test_case_trigger(assert_contains_exact(arrayB, "superwaahoo"));
+  test_case_no_trigger(assert_contains_exact(arrayB, "a"));
+  test_case_no_trigger(assert_contains_exact(arrayB, "d"));
+  test_case_trigger(assert_contains_exact(list, undefined));
+  test_case_trigger(assert_contains_exact(list, arrayA));
+  test_case_no_trigger(assert_contains_exact(list, "b"));
+  test_case_no_trigger(assert_contains_exact(list, 2));
+  
+  //assert_doesnt_contain_exact(got, content)
+  test_case_trigger(assert_doesnt_contain_exact(undefined, "waahoo"));
+  var inexistent = 0;
+  while (ds_exists(inexistent, ds_type_list)) inexistent++;
+  test_case_trigger(assert_doesnt_contain_exact(inexistent, "a"));
+  test_case_trigger(assert_doesnt_contain_exact("waahoo", 5));
+  test_case_no_trigger(assert_doesnt_contain_exact("waahoo", "abc"));
+  test_case_trigger(assert_doesnt_contain_exact("Caitlyn", "it"));
+  test_case_trigger(assert_doesnt_contain_exact("Caitlyn", "Ca"));
+  test_case_trigger(assert_doesnt_contain_exact("Caitlyn", "n"));
+  test_case_no_trigger(assert_doesnt_contain_exact(arrayA, "WAAHOO"));
+  test_case_trigger(assert_doesnt_contain_exact(arrayA, 3));
+  test_case_no_trigger(assert_doesnt_contain_exact(arrayB, undefined));
+  test_case_no_trigger(assert_doesnt_contain_exact(arrayB, 583));
+  test_case_no_trigger(assert_doesnt_contain_exact(arrayB, "superwaahoo"));
+  test_case_trigger(assert_doesnt_contain_exact(arrayB, "a"));
+  test_case_trigger(assert_doesnt_contain_exact(arrayB, "d"));
+  test_case_no_trigger(assert_doesnt_contain_exact(list, undefined));
+  test_case_no_trigger(assert_doesnt_contain_exact(list, arrayA));
+  test_case_trigger(assert_doesnt_contain_exact(list, "b"));
+  test_case_trigger(assert_doesnt_contain_exact(list, 2));
+  
   //CLEANUP
   ds_list_destroy(list);
 }
