@@ -1,6 +1,8 @@
 {
   var arrayA = test_fixture_array(1, 2, 3),
-      arrayB = test_fixture_array2(2, "a", "b", "c", "d");
+      arrayB = test_fixture_array2(2, "a", "b", "c", "d"),
+      list = ds_list_create();
+  ds_list_add(list, "a", "b", 1, 2);
   
   //assert(got)
   test_case_no_trigger(assert(5 > 3));
@@ -281,4 +283,29 @@
   test_case_trigger(assert_not_in_range(test_fixture_array(pi, "Bob"), test_fixture_array(3, "Bob"), test_fixture_array(4, "Caitlyn")));
   test_case_trigger(assert_not_in_range(test_fixture_array(pi, "Bob"), test_fixture_array(pi, "Bob"), test_fixture_array(4, "Caitlyn")));
   test_case_trigger(assert_not_in_range(test_fixture_array(pi, "Bob"), test_fixture_array(pi, "Alice"), test_fixture_array(4, "Bob")));
+
+  //assert_contains(got, content)
+  test_case_trigger(assert_contains(undefined, "waahoo"));
+  var inexistent = 0;
+  while (ds_exists(inexistent, ds_type_list)) inexistent++;
+  test_case_trigger(assert_contains(inexistent, "a"));
+  test_case_trigger(assert_contains("waahoo", 5));
+  test_case_trigger(assert_contains("waahoo", "abc"));
+  test_case_no_trigger(assert_contains("Caitlyn", "it"));
+  test_case_no_trigger(assert_contains("Caitlyn", "Ca"));
+  test_case_no_trigger(assert_contains("Caitlyn", "n"));
+  test_case_trigger(assert_contains(arrayA, "WAAHOO"));
+  test_case_no_trigger(assert_contains(arrayA, 3));
+  test_case_trigger(assert_contains(arrayB, undefined));
+  test_case_trigger(assert_contains(arrayB, 583));
+  test_case_trigger(assert_contains(arrayB, "superwaahoo"));
+  test_case_no_trigger(assert_contains(arrayB, "a"));
+  test_case_no_trigger(assert_contains(arrayB, "d"));
+  test_case_trigger(assert_contains(list, undefined));
+  test_case_trigger(assert_contains(list, arrayA));
+  test_case_no_trigger(assert_contains(list, "b"));
+  test_case_no_trigger(assert_contains(list, 2));
+  
+  //CLEANUP
+  ds_list_destroy(list);
 }
