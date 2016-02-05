@@ -306,6 +306,28 @@
   test_case_no_trigger(assert_contains(list, "b"));
   test_case_no_trigger(assert_contains(list, 2));
   
+  //assert_doesnt_contain(got, content)
+  test_case_trigger(assert_doesnt_contain(undefined, "waahoo"));
+  var inexistent = 0;
+  while (ds_exists(inexistent, ds_type_list)) inexistent++;
+  test_case_trigger(assert_doesnt_contain(inexistent, "a"));
+  test_case_trigger(assert_doesnt_contain("waahoo", 5));
+  test_case_no_trigger(assert_doesnt_contain("waahoo", "abc"));
+  test_case_trigger(assert_doesnt_contain("Caitlyn", "it"));
+  test_case_trigger(assert_doesnt_contain("Caitlyn", "Ca"));
+  test_case_trigger(assert_doesnt_contain("Caitlyn", "n"));
+  test_case_no_trigger(assert_doesnt_contain(arrayA, "WAAHOO"));
+  test_case_trigger(assert_doesnt_contain(arrayA, 3));
+  test_case_no_trigger(assert_doesnt_contain(arrayB, undefined));
+  test_case_no_trigger(assert_doesnt_contain(arrayB, 583));
+  test_case_no_trigger(assert_doesnt_contain(arrayB, "superwaahoo"));
+  test_case_trigger(assert_doesnt_contain(arrayB, "a"));
+  test_case_trigger(assert_doesnt_contain(arrayB, "d"));
+  test_case_no_trigger(assert_doesnt_contain(list, undefined));
+  test_case_no_trigger(assert_doesnt_contain(list, arrayA));
+  test_case_trigger(assert_doesnt_contain(list, "b"));
+  test_case_trigger(assert_doesnt_contain(list, 2));
+  
   //CLEANUP
   ds_list_destroy(list);
 }
