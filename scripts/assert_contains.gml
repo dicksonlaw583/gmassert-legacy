@@ -43,7 +43,7 @@
       }
       else {
         var size_i = array_height_2d(arr);
-        for (var i = 0; i < size_i; i++) {
+        for (var i = 0; i < size_i && !found; i++) {
           var size_j = array_length_2d(arr, i);
           for (var j = 0; j < size_j; j++) {
             if (__gma_equal__(argument[1], arr[i, j])) {
