@@ -1,4 +1,5 @@
 ///assert_is_real(got, [msg])
+//Assert that the gotten expression is a real number.
 {
   if (!GMASSERT_MODE) exit;
 

@@ -1,4 +1,5 @@
 ///assert_not_equal(got, expected, [msg])
+//Assert that the gotten expression is not equal to the expected expression.
 {
   if (!GMASSERT_MODE) exit;
   

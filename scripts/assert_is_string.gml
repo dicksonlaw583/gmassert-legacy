@@ -1,4 +1,5 @@
 ///assert_is_string(got, [msg])
+//Assert that the gotten expression is a string.
 {
   if (!GMASSERT_MODE) exit;
 

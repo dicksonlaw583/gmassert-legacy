@@ -1,4 +1,5 @@
 ///assert_less_than(got, expected, [msg])
+//Assert that the gotten expression is less than the expected expression.
 {
   if (!GMASSERT_MODE) exit;
   

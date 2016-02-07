@@ -1,4 +1,5 @@
 ///assert_is(got, expected, [msg])
+//Assert that the gotten expression is exactly equal to the expected expression (as compared using ==).
 {
   if (!GMASSERT_MODE) exit;
   

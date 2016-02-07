@@ -1,4 +1,5 @@
 ///assert_isnt_defined(got, [msg])
+//Assert that the gotten expression is undefined.
 {
   if (!GMASSERT_MODE) exit;
 

@@ -1,4 +1,5 @@
 ///assert_in_range(got, lower, upper, [msg])
+//Assert that the gotten expression is within the inclusive range between lower and upper.
 {
   if (!GMASSERT_MODE) exit;
   

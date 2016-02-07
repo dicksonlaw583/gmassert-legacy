@@ -1,4 +1,5 @@
 ///assert_doesnt_contain(got, content, [msg]);
+//Assert that the gotten string, list or array does not contain a value equal to content.
 {
   if (!GMASSERT_MODE) exit;
   

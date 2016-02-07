@@ -1,4 +1,5 @@
 ///assert(got, [msg])
+//Assert that the gotten expression is true.
 {
   if (!GMASSERT_MODE) exit;
 

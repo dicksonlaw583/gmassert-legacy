@@ -1,4 +1,5 @@
 ///assert_contains_exact(got, content, [msg]);
+//Assert that the gotten string, list or array contains a value exactly equal to content (as compared using ==).
 {
   if (!GMASSERT_MODE) exit;
   

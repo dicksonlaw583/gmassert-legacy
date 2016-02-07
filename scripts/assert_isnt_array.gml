@@ -1,4 +1,5 @@
 ///assert_isnt_array(got, [msg])
+//Assert that the gotten expression is not an array.
 {
   if (!GMASSERT_MODE) exit;
 

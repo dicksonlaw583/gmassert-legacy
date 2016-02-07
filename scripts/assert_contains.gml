@@ -1,4 +1,5 @@
 ///assert_contains(got, content, [msg]);
+//Assert that the gotten string, list or array contains a value equal to content.
 {
   if (!GMASSERT_MODE) exit;
   
