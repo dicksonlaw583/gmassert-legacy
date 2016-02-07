@@ -10,6 +10,7 @@
   <paths name="paths"/>
   <scripts name="scripts">
     <scripts name="gmassert">
+      <script>scripts\__GMA_BREAKPOINT__.gml</script>
       <script>scripts\__gma_assert_error__.gml</script>
       <script>scripts\__gma_assert_error_simple__.gml</script>
       <script>scripts\__gma_assert_error_raw__.gml</script>
