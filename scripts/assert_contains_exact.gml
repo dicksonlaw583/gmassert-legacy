@@ -69,7 +69,7 @@
           }
         }
         if (!found) {
-          __gma_assert_error_raw__(msg, "A list that contains exactly " + __gma_debug_value__(argument[1]), __gma_debug_value__(argument[0]));
+          __gma_assert_error_raw__(msg, "A list that contains exactly " + __gma_debug_value__(argument[1]), __gma_debug_list_value__(argument[0]));
         }
       }
       else {

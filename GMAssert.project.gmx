@@ -16,6 +16,7 @@
       <script>scripts\__gma_assert_error_raw__.gml</script>
       <script>scripts\__gma_debug_type__.gml</script>
       <script>scripts\__gma_debug_value__.gml</script>
+      <script>scripts\__gma_debug_list_value__.gml</script>
       <script>scripts\__gma_equal__.gml</script>
       <script>scripts\__gma_equalish__.gml</script>
       <script>scripts\__gma_greater_than__.gml</script>
@@ -55,6 +56,7 @@
       <script>scripts\test_case_trigger.gml</script>
       <script>scripts\test_fixture_array.gml</script>
       <script>scripts\test_fixture_array2.gml</script>
+      <script>scripts\test_fixture_list.gml</script>
       <script>scripts\gma_test_all.gml</script>
       <script>scripts\__gma_test_debug_type__.gml</script>
       <script>scripts\__gma_test_debug_value__.gml</script>
