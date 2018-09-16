@@ -21,8 +21,8 @@
         return len0 > len1;
       break;
       case GMASSERT_TYPE_ARRAY:
-        var a1d = array_length_2d(argument0, 0) == 0,
-            b1d = array_length_2d(argument1, 0) == 0;
+        var a1d = array_height_2d(argument0) == 1,
+            b1d = array_height_2d(argument1) == 1;
         if (a1d != b1d) return false;
         if (a1d) {
           var size = array_length_1d(argument0);

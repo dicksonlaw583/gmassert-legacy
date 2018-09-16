@@ -47,7 +47,7 @@
     var result = "",
         height = array_height_2d(argument0);
     //1D
-    if (height == 1 || array_length_2d(argument0, 0) == 0) {
+    if (height == 1 || array_height_2d(argument0) == 1) {
       size = array_length_1d(argument0)
       for (var i = 0; i < size; i++) {
         result += __gma_debug_value__(argument0[@ i]);
