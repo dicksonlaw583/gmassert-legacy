@@ -8,7 +8,7 @@
   var content = "",
       siz = ds_list_size(argument0);
   for (var i = 0; i < siz; i++) {
-    content += __gma_debug_value__(argument0[| i]);
+    content += __gma_debug_value__(argument0[| i], true);
     if (i < siz-1) {
       content += ", ";
     }
