@@ -1,4 +1,4 @@
-///__gma_assert_error__(message)
+///__gma_assert_error_simple__(message)
 {
   switch (GMASSERT_MODE) {
     case GMASSERT_MODE_SELFTEST:
