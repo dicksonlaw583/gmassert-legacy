@@ -1,8 +1,8 @@
 {
-  var type = __gma_debug_type__(argument0);
-  if (type == __gma_debug_type__(argument1)) {
+  var type = typeof(argument0);
+  if (type == typeof(argument1)) {
     switch (type) {
-      case GMASSERT_TYPE_ARRAY:
+      case "array":
         var a1d = array_height_2d(argument0) == 1,
             b1d = array_height_2d(argument1) == 1;
         if (a1d != b1d) return false;

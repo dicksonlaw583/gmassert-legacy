@@ -19,14 +19,14 @@
   
   //Check assertion
   if (!__gma_greater_than_or_equal__(argument[0], argument[1])) {
-    switch (__gma_debug_type__(argument[1])) {
-      case GMASSERT_TYPE_REAL:
+    switch (typeof(argument[1])) {
+      case "number":
         __gma_assert_error_raw__(msg, "A real value greater than or equal to " + __gma_debug_value__(argument[1]), __gma_debug_value__(argument[0]));
       break;
-      case GMASSERT_TYPE_STRING:
+      case "string":
         __gma_assert_error_raw__(msg, "A string that comes after or is " + __gma_debug_value__(argument[1]), __gma_debug_value__(argument[0]));
       break;
-      case GMASSERT_TYPE_ARRAY:
+      case "array":
         __gma_assert_error_raw__(msg, "An array with pairwise values all greater than or equal to " + __gma_debug_value__(argument[1]), __gma_debug_value__(argument[0]));
       break;
       default:

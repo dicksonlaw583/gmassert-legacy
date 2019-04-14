@@ -19,9 +19,9 @@
   
   //Check types and assertion
   var found = false;
-  switch (__gma_debug_type__(argument[0])) {
-    case GMASSERT_TYPE_STRING:
-      if (__gma_debug_type__(argument[1]) == GMASSERT_TYPE_STRING) {
+  switch (typeof(argument[0])) {
+    case "string":
+      if (typeof(argument[1]) == "string") {
         if (string_pos(argument[1], argument[0]) == 0) {
           __gma_assert_error_raw__(msg, "A string that contains " + __gma_debug_value__(argument[1]), __gma_debug_value__(argument[0]));
         }
@@ -31,7 +31,7 @@
         __gma_assert_error_raw__(msg, "A string", __gma_debug_value__(argument[1]));
       }
     break;
-    case GMASSERT_TYPE_ARRAY:
+    case "array":
       var arr = argument[0];
       if (array_height_2d(arr) == 1 || array_length_2d(arr, 1) == 0) {
         var size = array_length_1d(arr);
@@ -58,7 +58,7 @@
         __gma_assert_error_raw__(msg, "An array that contains " + __gma_debug_value__(argument[1]), __gma_debug_value__(argument[0]));
       }
     break;
-    case GMASSERT_TYPE_REAL:
+    case "number":
       if (ds_exists(argument[0], ds_type_list)) {
         var list = argument[0],
             size = ds_list_size(list);

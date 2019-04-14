@@ -1,11 +1,11 @@
 {
-  var type = __gma_debug_type__(argument0);
-  if (type == __gma_debug_type__(argument1)) {
+  var type = typeof(argument0);
+  if (type == typeof(argument1)) {
     switch (type) {
-      case GMASSERT_TYPE_REAL:
+      case "number":
         return argument0 < argument1;
       break;
-      case GMASSERT_TYPE_STRING:
+      case "string":
         if (argument0 == argument1) return false;
         var len0 = string_length(argument0),
             len1 = string_length(argument1),
@@ -20,7 +20,7 @@
         }
         return len0 < len1;
       break;
-      case GMASSERT_TYPE_ARRAY:
+      case "array":
         var a1d = array_height_2d(argument0) == 1,
             b1d = array_height_2d(argument1) == 1;
         if (a1d != b1d) return false;

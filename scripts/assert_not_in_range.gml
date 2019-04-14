@@ -18,25 +18,25 @@
   }
   
   //Check types
-  switch (__gma_debug_type__(argument[1])) {
-    case GMASSERT_TYPE_REAL:
-    case GMASSERT_TYPE_STRING:
-    case GMASSERT_TYPE_ARRAY:
+  switch (typeof(argument[1])) {
+    case "number":
+    case "string":
+    case "array":
     break;
     default:
       msg += " (invalid lower bound type)";
         __gma_assert_error_raw__(msg, "A real value, string or array", __gma_debug_value__(argument[1]));
     exit;
   }
-  if (__gma_debug_type__(argument[1]) != __gma_debug_type__(argument[2])) {
-    switch (__gma_debug_type__(argument[1])) {
-      case GMASSERT_TYPE_REAL:
+  if (typeof(argument[1]) != typeof(argument[2])) {
+    switch (typeof(argument[1])) {
+      case "number":
         __gma_assert_error__(msg + " (mismatched range types)", "A real value for the upper bound", __gma_debug_value__(argument[2]));
       break;
-      case GMASSERT_TYPE_STRING:
+      case "string":
         __gma_assert_error__(msg + " (mismatched range types)", "A string for the upper bound", __gma_debug_value__(argument[2]));
       break;
-      case GMASSERT_TYPE_ARRAY:
+      case "array":
         __gma_assert_error__(msg + " (mismatched range types)", "An array for the upper bound", __gma_debug_value__(argument[2]));
       break;     
       default:
@@ -49,14 +49,14 @@
   
   //Check assertion
   if (__gma_less_than_or_equal__(argument[0], argument[2]) && __gma_less_than_or_equal__(argument[1], argument[0])) {
-    switch (__gma_debug_type__(argument[1])) {
-      case GMASSERT_TYPE_REAL:
+    switch (typeof(argument[1])) {
+      case "number":
         __gma_assert_error_raw__(msg, "A real value not between " + __gma_debug_value__(argument[1]) + " and " + __gma_debug_value__(argument[2]), __gma_debug_value__(argument[0]));
       break;
-      case GMASSERT_TYPE_STRING:
+      case "string":
         __gma_assert_error_raw__(msg, "A string that does not lie between " + __gma_debug_value__(argument[1]) + " and " + __gma_debug_value__(argument[2]), __gma_debug_value__(argument[0]));
       break;
-      case GMASSERT_TYPE_ARRAY:
+      case "array":
         __gma_assert_error_raw__(msg, "An array with pairwise values all not between " + __gma_debug_value__(argument[1]) + " and " + __gma_debug_value__(argument[2]), __gma_debug_value__(argument[0]));
       break;
       default:
