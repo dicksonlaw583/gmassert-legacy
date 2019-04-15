@@ -1,7 +1,7 @@
 ///assert_fail(got, [msg])
 //Assert that the gotten expression is false.
 {
-  if (!GMASSERT_MODE) exit;
+  if (!GMASSERT_ENABLED) exit;
 
   //Capture message argument
   var msg;

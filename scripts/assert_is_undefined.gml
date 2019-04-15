@@ -1,6 +1,6 @@
 ///assert_is_undefined(got, [msg])
 {
-  if (!GMASSERT_MODE) exit;
+  if (!GMASSERT_ENABLED) exit;
 
   //Capture message argument
   var msg;

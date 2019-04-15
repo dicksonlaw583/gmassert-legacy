@@ -1,7 +1,7 @@
 ///assert_isnt_string(got, [msg])
 //Assert that the gotten expression is not a string.
 {
-  if (!GMASSERT_MODE) exit;
+  if (!GMASSERT_ENABLED) exit;
 
   //Capture message argument
   var msg;

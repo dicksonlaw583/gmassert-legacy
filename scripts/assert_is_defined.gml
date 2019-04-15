@@ -1,7 +1,7 @@
 ///assert_is_defined(got, [msg])
 //Assert that the gotten expression is not undefined.
 {
-  if (!GMASSERT_MODE) exit;
+  if (!GMASSERT_ENABLED) exit;
 
   //Capture message argument
   var msg;

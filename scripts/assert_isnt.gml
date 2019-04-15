@@ -1,7 +1,7 @@
 ///assert_isnt(got, expected, [msg])
 //Assert that the gotten expression is not exactly equal to the expected expression (as compared using ==).
 {
-  if (!GMASSERT_MODE) exit;
+  if (!GMASSERT_ENABLED) exit;
   
   //Capture message argument
   var msg;

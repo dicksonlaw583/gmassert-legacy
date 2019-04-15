@@ -1,7 +1,7 @@
 ///assert_greater_than_or_equal(got, expected, [msg])
 //Assert that the gotten expression is greater than or equal to the expected expression.
 {
-  if (!GMASSERT_MODE) exit;
+  if (!GMASSERT_ENABLED) exit;
   
   //Capture message argument
   var msg;

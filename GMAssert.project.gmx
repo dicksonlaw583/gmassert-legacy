@@ -69,7 +69,7 @@
     <room>rooms\rm_test</room>
   </rooms>
   <constants number="2">
-    <constant name="GMASSERT_MODE">true</constant>
+    <constant name="GMASSERT_ENABLED">true</constant>
     <constant name="GMASSERT_TOLERANCE">0.0000001</constant>
   </constants>
   <help>

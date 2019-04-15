@@ -1,6 +1,6 @@
 ///assert_operation(got, expected, op, invert, [msg], [debug_got], [debug_expected])
 {
-  if (!GMASSERT_MODE) exit;
+  if (!GMASSERT_ENABLED) exit;
   
   //Capture message argument
   var msg = "Assertion Failed!",

@@ -1,7 +1,7 @@
 ///assert_not_equalish(got, expected, [msg])
 //Assert that the gotten expression is not approximately equal to the expected expression.
 {
-  if (!GMASSERT_MODE) exit;
+  if (!GMASSERT_ENABLED) exit;
   
   //Capture message argument
   var msg;
