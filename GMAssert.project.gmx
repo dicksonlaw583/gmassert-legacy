@@ -24,6 +24,7 @@
       <script>scripts\__gma_less_than_or_equal__.gml</script>
       <script>scripts\assert.gml</script>
       <script>scripts\assert_fail.gml</script>
+      <script>scripts\assert_operation.gml</script>
       <script>scripts\assert_equal.gml</script>
       <script>scripts\assert_equalish.gml</script>
       <script>scripts\assert_is.gml</script>
@@ -66,7 +67,7 @@
     <room>rooms\rm_test</room>
   </rooms>
   <constants number="5">
-    <constant name="GMASSERT_MODE">GMASSERT_MODE_SELFTEST</constant>
+    <constant name="GMASSERT_MODE">true</constant>
     <constant name="GMASSERT_MODE_DISABLED">0</constant>
     <constant name="GMASSERT_MODE_SELFTEST">1</constant>
     <constant name="GMASSERT_MODE_ENABLED">2</constant>

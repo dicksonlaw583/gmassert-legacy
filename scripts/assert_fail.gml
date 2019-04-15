@@ -19,6 +19,6 @@
   
   //Check assertion
   if (argument[0]) {
-    __gma_assert_error_simple__(msg);
+    __gma_assert_error_simple__(msg, argument[0]);
   }
 }
