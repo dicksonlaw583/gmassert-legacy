@@ -15,7 +15,6 @@
   
   //1d array
   var arrayA = test_fixture_array(5, 6, 7);
-  show_debug_message(__gma_debug_value__(arrayA))
   test_case(__gma_debug_value__(arrayA), '(array)' + nl + '[5, 6, 7]');
   
   //2d array
