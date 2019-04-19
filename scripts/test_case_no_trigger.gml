@@ -23,7 +23,7 @@
     global.__gma_test_time__ += current_time-global.__gma_test_time_start__;
     var msg = "Test case " + string(global.__gma_case_count__) + " failed!";
     if (os_browser == browser_not_a_browser) {
-      show_error(msg, true);
+      show_error(msg, false);
     }
     else {
       show_message(msg);

@@ -3,11 +3,10 @@
       got = argument[1],
       expected = argument[2];
   
-  // Place a breakpoint below
-  var __GMA_MY_BREAKPOINT__ = true;
-  
-  /* Additional assertion failure handling behaviours here */
+  // This is for the self-test only
+  // Extension default has a dummy line here instead
+  global.__gma_assert_triggered__ = true;
   
   // Return true to bypass error popup, false otherwise
-  return false;
+  return true;
 }

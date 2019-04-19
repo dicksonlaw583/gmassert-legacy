@@ -14,6 +14,12 @@
   test_case_no_trigger(assert_fail(undefined));
   test_case_trigger(assert_fail(5 > 3));
   
+  //assert_operation(got, expected, op, invert, [msg], [debug_got], [debug_expected])
+  test_case_no_trigger(assert_operation(584, 583, test_fixture_greater_than, false));
+  test_case_trigger(assert_operation(582, 583, test_fixture_greater_than, false));
+  test_case_trigger(assert_operation(584, 583, test_fixture_greater_than, true));
+  test_case_no_trigger(assert_operation(582, 583, test_fixture_greater_than, true));
+  
   //assert_equal(got, expected)
   test_case_no_trigger(assert_equal(-4, -4));
   test_case_no_trigger(assert_equal("abc", "abc"));

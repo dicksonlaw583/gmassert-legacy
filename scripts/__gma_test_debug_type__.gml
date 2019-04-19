@@ -1,20 +1,20 @@
 {
   //undefined
-  test_case(__gma_debug_type__(undefined), GMASSERT_TYPE_UNDEFINED);
-  
+  test_case(typeof(undefined), "undefined");
+
   //real
-  test_case(__gma_debug_type__(7), GMASSERT_TYPE_REAL);
-  test_case(__gma_debug_type__(-pi), GMASSERT_TYPE_REAL);
-  
+  test_case(typeof(7), "number");
+  test_case(typeof(-pi), "number");
+
   //string
-  test_case(__gma_debug_type__(""), GMASSERT_TYPE_STRING);
-  test_case(__gma_debug_type__("waahoo"), GMASSERT_TYPE_STRING);
+  test_case(typeof(""), "string");
+  test_case(typeof("waahoo"), "string");
   
   //1D array
   var arrayA = test_fixture_array(5, 6, 7);
-  test_case(__gma_debug_type__(arrayA), GMASSERT_TYPE_ARRAY);
-  
+  test_case(typeof(arrayA), "array");
+
   //2D array
   var arrayB = test_fixture_array2(2, 5, "a", "b", 7);
-  test_case(__gma_debug_type__(arrayB), GMASSERT_TYPE_ARRAY);
+  test_case(typeof(arrayB), "array");
 }
